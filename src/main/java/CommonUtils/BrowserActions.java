@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BrowserActions {
 
-    static WebDriver driver;
+    public static WebDriver driver;
 
     void launchBrowser(){
         System.setProperty("webdriver.chrome.driver","C:\\Users\\Ankit\\IdeaProjects\\flipkart\\src\\main\\resources\\chromedriver.exe");
@@ -26,7 +26,7 @@ public class BrowserActions {
         driver.findElement(by).click();
     }
 
-    void enterText(By by, String text){
+    public void enterText(By by, String text){
         driver.findElement(by).sendKeys(text);
     }
 
@@ -46,6 +46,6 @@ public class BrowserActions {
         wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    
+
 
 }
